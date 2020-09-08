@@ -16,7 +16,7 @@
 
 	mobilePattern="^[0-9]{2}[[:space:]][0-9]{10}$"
 
-	PasswordPattern="^[a-zA-Z0-9]{8}$"
+	PasswordPattern="^[a-zA-Z0-9]{8,}$"
 
 	if [[ $First_Name =~ $Pattern ]]
 	then
