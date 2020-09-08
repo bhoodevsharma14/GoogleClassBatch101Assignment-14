@@ -8,11 +8,15 @@
 
 	read -p "Enter Mobile Number : " mobile
 
+	read -p "Enter Password : " password
+
 	Pattern="^[[:upper:]]{1}[a-zA-Z0-9]{2,}$"
 
 	emailPattern="^[[:lower:]]{3}[a-zA-Z0-9]*([-+_.]?[a-zA-Z0-9])*@[a-z]{2,}.[a-z]{2,3}([.][a-z]{2})*$"
 
 	mobilePattern="^[0-9]{2}[[:space:]][0-9]{10}$"
+
+	PasswordPattern="^[a-zA-Z0-9]{8}$"
 
 	if [[ $First_Name =~ $Pattern ]]
 	then
@@ -23,10 +27,10 @@
 
 	if [[ $Last_Name =~ $Pattern ]]
    then
-      echo "Last Name is Valid"
-   else
-      echo "Last Name is Invalid"
-   fi
+		echo "Last Name is Valid"
+	else
+		echo "Last Name is Invalid"
+	fi
 
 	if [[ $email =~ $emailPattern ]]
 	then
@@ -40,4 +44,11 @@
 		echo "It's a Valid Mobile Number"
 	else
 		echo "It's an Invalid Mobile Number"
+	fi
+
+	if [[ $password =~ $PasswordPattern ]]
+	then
+		echo "Password Set Successfully "
+	else
+		echo "Incorrect Password "
 	fi
