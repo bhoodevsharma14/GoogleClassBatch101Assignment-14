@@ -25,35 +25,35 @@
 
 	if [[ $First_Name =~ $Pattern ]]
 	then
-		echo "First Name is Valid"
+		echo "First Name $First_Name is Valid"
 	else
-		echo "First Name is Invalid"
+		echo "First Name $First_Name is Invalid"
 	fi
 
 	if [[ $Last_Name =~ $Pattern ]]
    then
-		echo "Last Name is Valid"
+		echo "Last Name $Last_Name is Valid"
 	else
-		echo "Last Name is Invalid"
+		echo "Last Name $Last_Name is Invalid"
 	fi
 
 	if [[ $email =~ $emailPattern ]]
 	then
-		echo "It's Valid Email"
+		echo "$email It's Valid Email"
 	else
-		echo "It's Invalid Email"
+		echo "$email It's Invalid Email"
 	fi
 
 	if [[ $mobile =~ $mobilePattern ]]
 	then
-		echo "It's a Valid Mobile Number"
+		echo "$mobile It's a Valid Mobile Number"
 	else
-		echo "It's an Invalid Mobile Number"
+		echo "$mobile It's an Invalid Mobile Number"
 	fi
 
 	if [[ ${#password} -ge 8 && $password =~ [[:lower:]] && $password =~ [[:upper:]] && $password =~ [[:digit:]] && $special_char -eq 1 ]]
 	then
 		echo "Password Set Successfully "
 	else
-		echo "Incorrect Password "
+		echo -e "Incorrect Password Your Password Must Have \nUpper-case,lower-case,digit,length should be minimum 8 and Exaclty one Special Character"
 	fi
