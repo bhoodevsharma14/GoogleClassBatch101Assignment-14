@@ -16,10 +16,10 @@
 
 	mobilePattern="^[0-9]{2}[[:space:]][0-9]{10}$"
 
-	PasswordPattern="[a-zA-Z][[:upper:]]"
+	PasswordPattern="[a-zA-Z0-9][[:upper:]]"
 
 
-	echo -e "\t\t Your Registration Details are \n"
+	echo -e "\t\t\n Your Registration Details are \n"
 
 
 
@@ -51,7 +51,7 @@
 		echo "It's an Invalid Mobile Number"
 	fi
 
-	if [[ ${#password} -ge 8 && $password =~ $PasswordPattern ]]
+	if [[ ${#password} -ge 8 && $password =~ $PasswordPattern && $password =~ [[:digit:]] ]]
 	then
 		echo "Password Set Successfully "
 	else
